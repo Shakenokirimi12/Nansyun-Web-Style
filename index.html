@@ -71,10 +71,23 @@
     </table>
     <div id="lastUpdated"></div>
     <div id="qrCode">
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://nansyun-five-style.web.app" alt="QR Code">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://nansyun-web-style.pages.dev" alt="QR Code">
     <p>スマートフォンからランキングを見ることができます！</p>
   </div>
     <script>
+      
+      // リダイレクト処理
+      function redirectIfMobile() {
+        var userAgent = navigator.userAgent.toLowerCase();
+        if (
+          userAgent.indexOf("iphone") !== -1 ||
+          userAgent.indexOf("android") !== -1
+        ) {
+          window.location.href = "mobile.html";
+        }
+      }
+      
+      
       // リクエストを送信してデータを取得
       function fetchRankings() {
         // リクエストを送信してデータを取得
@@ -110,6 +123,11 @@
           })
           .catch((error) => console.log(error));
       }
+      
+      
+      // 初回読み込み時にリダイレクト処理を実行
+      redirectIfMobile();
+      
       // 初回読み込み
       fetchRankings();
 
