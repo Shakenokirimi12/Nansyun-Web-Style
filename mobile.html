@@ -4,7 +4,56 @@
     <title>正解数 トップ10</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      /* CSSスタイルは省略 */
+            body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #e9e9e9;
+      }
+
+      #lastUpdated {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+
+      #qrCode {
+        margin-top: 20px;
+      }
 
       /* 読み込みアニメーション */
       #loader {
@@ -33,7 +82,7 @@
   </head>
   <body>
     <div id="loader">
-      <div class="loader-circle"></div>
+      <div class="loader-circle">楠隼クイズ研究会</div>
     </div>
     <div id="content" style="display: none;">
       <h1>上位10チームを越せるかな？</h1>
